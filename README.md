@@ -18,4 +18,5 @@ Picture of the organization below.
  ![alt text](MainScreenpic.jpg)
  ![alt text](OrderScreenpic.jpg)
 
- bugs or errors: N/A
+ bugs or errors: 
+ -3:10 screens having a stack overflow error(fixed at 3:25)

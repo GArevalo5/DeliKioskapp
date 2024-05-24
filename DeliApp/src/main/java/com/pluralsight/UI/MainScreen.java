@@ -3,11 +3,10 @@ package com.pluralsight.UI;
 import java.util.Scanner;
 
 public class MainScreen {
-    OrderScreen orderScreen = new OrderScreen();
 
     public void mainScreenPage(){
         Scanner userInput = new Scanner(System.in);
-        int choice = 0;
+        OrderScreen orderScreen = new OrderScreen();
 
         System.out.println("Delicious Sandwiches");
         System.out.println("-".repeat(40));
@@ -17,17 +16,22 @@ public class MainScreen {
         System.out.println("Press 2 to quit");
         System.out.println();
         System.out.print("Enter input: ");
-        userInput.nextInt();
+        int choice = userInput.nextInt();
+        System.out.println();
 
-        switch (choice){
-            case 1:
-                orderScreen.orderScreenMenu();
-                break;
+        try {
 
-            case 2:
-                System.exit(0);
+            switch (choice) {
+                case 1:
+                    orderScreen.orderScreenMenu();
+                    break;
 
+                case 2:
+                    System.exit(0);
+
+            }
+        } catch (Exception e) {
+            throw new RuntimeException(e);
         }
-
     }
 }
