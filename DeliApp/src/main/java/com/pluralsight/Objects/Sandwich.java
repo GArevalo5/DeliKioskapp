@@ -1,13 +1,13 @@
 package com.pluralsight.Objects;
 
 public class Sandwich {
-    String bread;
-    String meatTopping;
-    boolean extraMeat;
-    boolean extraCheese;
-    String regularTopping;
-    String sauce;
-    String sides;
+    private String bread;
+    private String meatTopping;
+    private boolean extraMeat;
+    private boolean extraCheese;
+    private String regularTopping;
+    private String sauce;
+    private String sides;
 
     public Sandwich(String bread, String meatTopping, boolean extraMeat, boolean extraCheese, String regularTopping, String sauce, String sides) {
         this.bread = bread;
