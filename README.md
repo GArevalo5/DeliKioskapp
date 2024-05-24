@@ -10,6 +10,7 @@ Picture of the white board below.
 
 I started off eventually with making the classes I would need and folders to organize them.
 Picture of the organization below.
+
 ![alt text](HowIOrderedTheClasses.jpg)
 
  I then started making the screens 1st to make sure I had a way of testing sections were working as I kept going with the project.
