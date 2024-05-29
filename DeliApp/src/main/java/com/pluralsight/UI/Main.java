@@ -1,6 +1,4 @@
-package com.pluralsight;
-
-import com.pluralsight.UI.MainScreen;
+package com.pluralsight.UI;
 
 public class Main {
     public static void main(String[] args) {

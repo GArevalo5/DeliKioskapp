@@ -1,5 +1,11 @@
 package com.pluralsight.UI;
 
+import com.pluralsight.Objects.Sandwich;
+import com.pluralsight.Writer.ReceiptWriter;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class OrderScreen {
@@ -37,7 +43,7 @@ public class OrderScreen {
                     break;
                 case 5:
                     cancelOrder();
-                    System.out.println("Order made!");
+                    System.out.println("Order canceled!");
                     System.out.println("-".repeat(50));
                     mainScreen.mainScreenPage();
             }
@@ -47,7 +53,80 @@ public class OrderScreen {
     }
 
 public void addSandwich(){
-    System.out.println("Still in progress");
+        Scanner userInput = new Scanner(System.in);
+
+    List<Sandwich>sandwichOrder = new ArrayList<>();
+
+    System.out.println();
+    //ask for sandwich size
+    System.out.println("Select sandwich size from following options:");
+    System.out.println("1) 4 inch");
+    System.out.println("2) 8 inch");
+    System.out.println("3) 12 inch");
+    System.out.println("4) Main Screen");
+    System.out.println();
+    System.out.println("Input:");
+    int sandwichSize = userInput.nextInt();
+        //choices for size of sandwich
+        switch (sandwichSize) {
+            case 1:
+                System.out.println("4 inch added!");
+                sandwichOrder.add(sandwichSize);
+                break;
+            case 2:
+                System.out.println("8 inch added!");
+                sandwichOrder.add(sandwichSize);
+                break;
+            case 3:
+                System.out.println("12 inch added!");
+                sandwichOrder.add(sandwichSize);
+            case 4:
+                orderScreenMenu();
+        }
+
+    //ask for type of bread and add it
+    System.out.println("Select what type of bread from the following options:");
+    System.out.println();
+    System.out.println("1) White");
+    System.out.println("2) Wheat");
+    System.out.println("3) Rye");
+    System.out.println("4) Wrap");
+    System.out.println("5) return to main screen ");
+    System.out.println("Input: ");
+    int breadChoice = userInput.nextInt();
+    //types of bread choices
+    switch (breadChoice){
+        case 1:
+            System.out.println("White bread selected");
+            sandwichOrder.add(breadChoice);
+        case 2:
+            System.out.println("Wheat bread added");
+            sandwichOrder.add(breadChoice);
+        case 3:
+            System.out.println("Rye bread added");
+            sandwichOrder.add(breadChoice);
+        case 4:
+            System.out.println("Wrap bread added");
+            sandwichOrder.add(breadChoice);
+        case 5:
+            orderScreenMenu();
+    }
+
+    //ask for toppings
+    System.out.println("What toppings from the following options ");
+
+    //meat
+
+    //cheese
+
+    //other toppings
+
+    //sauces
+
+    //if they want it toasted
+
+    //record onto receipt
+
 }
 
 public void addDrink(){
@@ -59,7 +138,11 @@ public void addChips(){
 }
 
 public void checkOut(){
-    System.out.println("Still in progress");
+    ReceiptWriter receiptWriter = new ReceiptWriter();
+    receiptWriter.customerReceipt();
+    System.out.println("Receipt printed");
+    System.out.println("Returning to main screen");
+
 }
 
 public void cancelOrder(){

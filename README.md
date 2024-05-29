@@ -20,3 +20,15 @@ Picture of the organization below.
 
  bugs or errors: 
  -3:10 screens having a stack overflow error(fixed at 3:25)
+
+ 5-28-24
+
+ Today was a day of trying to get things to work. Currently things still not functioning as intended ,but made progress into actually adding a sandwich order along with getting a receipt to print. I also started adding many of the other functions to the orderscreen that I thought I could get going and get help later for.
+
+ With the addSandwich function I'm using switches to get the user input of the type of sandwich they want and putting it into a list so that it can be recorded and added onto the receipt. So far having a issue of setting it up to add onto the list ,but hopefully can fix that by tommrow.
+ as for the ReceiptWriter class. I don't quite have it running 100% ,but I was able to at least get it written out in a way that I know what I need to do.
+ checkout function "works" ,but since the receiptWriter isn't ready yet to print, it will not work as intended.
+
+ bugs or errors:
+ -Add sandwich dosen't actually add anything yet due to lists not working yet (in progress)
+ -ReceiptWriter not working yet (In progress)
