@@ -16,31 +16,24 @@ public class ReceiptWriter {
 public void customerReceipt(){
     Scanner userInput = new Scanner(System.in);
 
-        Sandwich testSandwich = new Sandwich(4,"Wheat","Mayo",5.50);
-        Topping bacon = new Topping("Bacon",1.00,false,false);
-        Topping ham = new Topping("Ham", 1.00,false,false);
-
-        Sandwich.add(bacon);
-        Sandwich.add(ham);
 
 
-
-        String receiptOrder = "receipt.txt";
+        String receiptOrder = "Files/receipt.txt";
         //Should write out everything ordered and print it into a text file
         try {
             FileWriter fileWriter = new FileWriter(receiptOrder);
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
 
-            double totalPrice = testSandwich.getSandwichPrice() + bacon.getPrice() + ham.getPrice();
+            double totalPrice = 0;
 
             bufferedWriter.write("-------DELICIOUS SANDWICHES-------");
             bufferedWriter.newLine();
             //writes sandwich first
-            bufferedWriter.write("Sandwich: " + testSandwich.getSize() + "Type of bread: " + testSandwich.getBread()
-            + "Type of sauce" + testSandwich.getSauce());
+            bufferedWriter.write("Sandwich: "  + "Type of bread: "
+            + "Type of sauce" );
             bufferedWriter.newLine();
             //writes what toppings there are next
-            bufferedWriter.write("Toppings: " + bacon.getName()+ ham.getName());
+            bufferedWriter.write("Toppings: ");
             bufferedWriter.newLine();
             //prints side
             bufferedWriter.write("side: ");

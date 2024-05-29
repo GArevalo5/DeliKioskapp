@@ -12,18 +12,19 @@ public class Topping {
         this.isExtraMeat = isExtraMeat;
         this.isExtraCheese = isExtraCheese;
     }
+    public Topping(){
+
+    }
 
     public String getName() {
         return name;
     }
 
     public double getPrice() {
-
         return price;
     }
 
     public boolean isExtraMeat() {
-
         return isExtraMeat;
     }
 

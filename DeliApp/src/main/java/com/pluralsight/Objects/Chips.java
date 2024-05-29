@@ -4,13 +4,24 @@ import java.util.List;
 
 public class Chips extends Sandwich {
     private boolean chips;
-
-    public Chips(int size, String bread, String sauce, double sandwichPrice) {
-        super(size, bread, sauce, sandwichPrice);
-    }
-
+    private double price;
 
     public boolean isChips() {
         return chips;
+    }
+
+    public void setChips(boolean chips) {
+        this.chips = chips;
+    }
+
+    public double getPrice() {
+        if (chips){
+            price = 1.50;
+        }
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
     }
 }
