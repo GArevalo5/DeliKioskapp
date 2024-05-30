@@ -3,7 +3,7 @@ package com.pluralsight.Objects;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Sandwich {
+public class Sandwich implements Product {
     private int size;
     private String bread;
     private List<Topping> toppings;
@@ -21,6 +21,7 @@ public class Sandwich {
     }
 
     public Sandwich() {
+        toppings = new ArrayList<>();
     }
 
     public int getSize() {
@@ -68,5 +69,29 @@ public class Sandwich {
 
     public void setToasted(String toasted) {
         this.toasted = toasted;
+    }
+
+    @Override
+    public String getName() {
+        return "";
+    }
+
+    @Override
+    public void setName(String name) {
+
+    }
+
+    @Override
+    public double getPrice() {
+        return 0;
+    }
+
+    @Override
+    public void setPrice(double price) {
+
+    }
+
+    public List<Topping> getToppings() {
+        return toppings;
     }
 }

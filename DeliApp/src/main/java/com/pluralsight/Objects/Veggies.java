@@ -1,25 +1,20 @@
 package com.pluralsight.Objects;
-//added to topping so would just work right
-public class Side extends Topping {
-    String sideChoice;
+
+public class Veggies extends Topping {
+    String name;
 
 
-
-    public Side(String sideChoice) {
-        this.sideChoice = sideChoice;
-    }
-
-    public Side() {
+    public Veggies() {
     }
 
     @Override
     public String getName() {
-        return sideChoice;
+        return name;
     }
 
     @Override
     public void setName(String name) {
-
+        this.name = name;
     }
 
     @Override

@@ -4,17 +4,20 @@ package com.pluralsight.ReceiptOrder;
 import com.pluralsight.Objects.*;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Order
 {
-   public void orderList(){
-       ArrayList<Order> recieptOrderSandwich = new ArrayList<>();
-       Sandwich sandwich = new Sandwich();
-       Topping topping = new Topping();
-       Side side = new Side();
-       Drink drink = new Drink();
-       Chips chips = new Chips();
+    private ArrayList<Product> recieptOrder = new ArrayList<>();
 
-
+   public void addProduct(Product product)
+   {
+        recieptOrder.add(product);
    }
+
+   public List<Product> getItems()
+   {
+       return recieptOrder;
+   }
+
 }
