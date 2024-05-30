@@ -32,3 +32,16 @@ Picture of the organization below.
  bugs or errors:
  -Add sandwich dosen't actually add anything yet due to lists not working yet (in progress)
  -ReceiptWriter not working yet (In progress)
+
+ 5-29-24
+
+ Most of the order screen options are working now ,but will not be written by the receiptWriter. Receiptwriter function also works ,but just needs to get things from the order screen to fill out the .txt file. I'm still figuring out how to setup the sandwich order with it's topping on top of adding the soda and chips into Array list that can be printed onto the writer. Once I get that figured out it should all work and be good to go.
+Screenshots below are in this order: receiptWriter, checkout screen and cancel screen.
+![alt text](<writer screenshot-1.jpg>)
+![alt text](<checkout screen-1.jpg>)
+![alt text](<Cancel order-1.jpg>)
+
+
+ bugs or errors:
+ -Add sandwich,drink and chips dosen't actually add anything yet due to lists not working yet (in progress)
+ -ReceiptWriter not working yet (In progress)

@@ -8,14 +8,13 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.Buffer;
+import java.time.LocalDateTime;
 import java.util.Scanner;
 
 public class ReceiptWriter {
 
     //Will write the receipt
-public void customerReceipt(){
-    Scanner userInput = new Scanner(System.in);
-
+    public void customerReceipt() {
 
 
         String receiptOrder = "Files/receipt.txt";
@@ -28,13 +27,17 @@ public void customerReceipt(){
 
             bufferedWriter.write("-------DELICIOUS SANDWICHES-------");
             bufferedWriter.newLine();
+            bufferedWriter.write(String.valueOf(LocalDateTime.now()));
+            bufferedWriter.newLine();
             //writes sandwich first
-            bufferedWriter.write("Sandwich: "  + "Type of bread: "
-            + "Type of sauce" );
+            bufferedWriter.write("Sandwich: ");
+            bufferedWriter.newLine();
+            bufferedWriter.write("Type of bread: ");
             bufferedWriter.newLine();
             //writes what toppings there are next
             bufferedWriter.write("Toppings: ");
             bufferedWriter.newLine();
+            bufferedWriter.write("Type of sauce: ");
             //prints side
             bufferedWriter.write("side: ");
             bufferedWriter.newLine();
@@ -45,6 +48,7 @@ public void customerReceipt(){
             bufferedWriter.write("Drink: ");
             bufferedWriter.newLine();
             //adds total from the order
+            bufferedWriter.write("-".repeat(50));
             bufferedWriter.write("Total price: " + totalPrice);
             bufferedWriter.newLine();
             bufferedWriter.close();

@@ -4,8 +4,12 @@ public class Side {
     String sideChoice;
 
 
+
     public Side(String sideChoice) {
         this.sideChoice = sideChoice;
+    }
+
+    public Side() {
     }
 
     public String getSideChoice() {
