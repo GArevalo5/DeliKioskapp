@@ -1,8 +1,5 @@
 package com.pluralsight.ReceiptOrder;
-
-
 import com.pluralsight.Objects.*;
-
 import java.util.ArrayList;
 import java.util.List;
 

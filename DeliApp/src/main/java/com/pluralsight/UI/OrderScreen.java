@@ -1,9 +1,7 @@
 package com.pluralsight.UI;
-
 import com.pluralsight.Objects.*;
 import com.pluralsight.ReceiptOrder.Order;
 import com.pluralsight.Writer.ReceiptWriter;
-
 import java.util.Scanner;
 
 public class OrderScreen {

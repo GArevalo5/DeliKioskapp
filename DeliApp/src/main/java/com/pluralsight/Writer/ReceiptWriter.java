@@ -1,12 +1,9 @@
 package com.pluralsight.Writer;
 import com.pluralsight.Objects.*;
 import com.pluralsight.ReceiptOrder.Order;
-
 import java.io.BufferedWriter;
-import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -17,16 +14,13 @@ public class ReceiptWriter {
 
     //Will write the receipt
     public void customerReceipt(Order order) {
-        LocalDate localDate = LocalDate.now();
-        DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("yyyy/MM/dd-hh:mm:ss");
-        String formattedDate = localDate.format(dateFormat);
-
-
-        String receiptOrder = "Files/receipt.txt";
+        String formattedDate = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd_HHmmss"));;
         double totalPrice = 0;
+
 
         //Should write out everything ordered and print it into a text file
         try {
+            String receiptOrder = "Files/receipt_"+ formattedDate + ".txt";
             FileWriter fileWriter = new FileWriter(receiptOrder);
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
 
@@ -94,14 +88,14 @@ public class ReceiptWriter {
                 {
                     Chips chips = (Chips)product;
                     bufferedWriter.newLine();
-                    bufferedWriter.write("Chips price: " + chips.getPrice());
+                    bufferedWriter.write("Chips price: $ " + chips.getPrice());
                     bufferedWriter.newLine();
                     totalPrice += chips.getPrice();
                 }
             }
             bufferedWriter.write("-".repeat(50));
             bufferedWriter.newLine();
-            bufferedWriter.write("Total: " + totalPrice);
+            bufferedWriter.write("Total: $ " + totalPrice);
             bufferedWriter.newLine();
             bufferedWriter.write("-".repeat(50));
             bufferedWriter.newLine();
